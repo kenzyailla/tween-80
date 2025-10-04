@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل الشامل النهائي لتركيب المستحلبات والكريمات</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Noto Kufi Arabic", sans-serif;
+        }
+        
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --chemical: #8e44ad;
+            --oil: #e74c3c;
+            --water: #3498db;
+            --ideal: #27ae60;
+            --hot: #e74c3c;
+            --cold: #3498db;
+            --light: #ecf0f1;
+            --dark: #34495e;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark);
+            line-height: 1.7;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .toc {
+            background: var(--light);
+            padding: 25px;
+            border-bottom: 3px solid var(--secondary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            text-align: center;
+        }
+        
+        .toc-item {
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .toc-item:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .chapter {
+            margin-bottom: 50px;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            scroll-margin-top: 80px;
+        }
+        
+        .chapter-header {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: -25px -25px 25px -25px;
+        }
+        
+        h2 {
+            color:white;
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        h3 {
+            color: var(--secondary);
+            margin: 25px 0 15px;
+        }
+        
+        h4 {
+            color:rgb(24, 0, 0)
+#180000;
+            margin: 20px 0 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .formula-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 25px 0;
+        }
+        
+        .formula-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border: 2px solid var(--light);
+            transition: transform 0.3s ease;
+        }
+        
+        .formula-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--chemical) 100%);
+            color: white;
+            padding: 15px;
+            margin: -25px -25px 20px -25px;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: right;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background: var(--secondary);
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .chemical-box {
+            background: #e8f4fc;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-right: 4px solid var(--chemical);
+        }
+        
+        .formula {
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 2px dashed var(--chemical);
+        }
+        
+        .calculation-box {
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-right: 4px solid var(--secondary);
+        }
+        
+        .steps-box {
+            background: #e8f4fc;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-right: 4px solid var(--success);
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background: var(--secondary);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .warning-box {
+            background: #ffeaa7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-right: 4px solid var(--warning);
+        }
+        
+        .success-box {
+            background: #d5f4e6;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-right: 4px solid var(--success);
+        }
+        
+        .correction-box {
+            background: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-right: 4px solid var(--accent);
+        }
+        
+        .comparison-box {
+            background: #e8dff5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-right: 4px solid var(--chemical);
+        }
+        
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .property-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border-right: 4px solid var(--secondary);
+        }
+        
+        .phase-analysis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .analysis-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-top: 5px solid;
+        }
+        
+        .current-card {
+            border-top-color: var(--oil);
+        }
+        
+        .ideal-card {
+            border-top-color: var(--ideal);
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .highlight {
+            background: #fffacd;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .oil-color {
+            background: #ffebee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: var(--oil);
+        }
+        
+        .water-color {
+            background: #e3f2fd;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: var(--water);
+        }
+        
+        .ideal-color {
+            background: #d5f4e6;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: var(--success);
+        }
+        
+        .hot {
+            background: #ffebee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: var(--hot);
+        }
+        
+        .cold {
+            background: #e3f2fd;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: var(--cold);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: var(--primary);
+            color: white;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .formula-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .properties-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .phase-analysis {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media print {
+            .toc {
+                display: none;
+            }
+            
+            .chapter {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>الدليل الشامل النهائي لتركيب المستحلبات والكريمات</h1>
+      
+        </header>
+        
+        <div class="toc">
+            <h3>فهرس المحتويات الشامل</h3>
+            <div class="toc-grid">
+                <div class="toc-item" onclick="scrollToChapter('chapter1')">١. تحليل التحييد العلمي</div>
+                <div class="toc-item" onclick="scrollToChapter('chapter2')">٢. التركيبة الأساسية وتحليلها</div>
+                <div class="toc-item" onclick="scrollToChapter('chapter3')">٣. تحييد الكاربابول</div>
+                <div class="toc-item" onclick="scrollToChapter('chapter4')">٤. توين 80 وسبان 80</div>
+                <div class="toc-item" onclick="scrollToChapter('chapter5')">٥. الخلطات العملية</div>
+                <div class="toc-item" onclick="scrollToChapter('chapter6')">٦. طرق التصنيع</div>
+                <div class="toc-item" onclick="scrollToChapter('chapter7')">٧. نسب الأطوار</div>
+                <div class="toc-item" onclick="scrollToChapter('chapter8')">٨. النصائح العلمية</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            
+            <!-- الفصل 1 -->
+            <div id="chapter1" class="chapter">
+                <div class="chapter-header">
+                    <h2>الفصل الأول: تحليل التحييد العلمي - الأسس الكيميائية</h2>
+                </div>
+                
+                <h3>المعادلة الكيميائية الأساسية</h3>
+                <div class="formula">
+                    C₁₇H₃₅COOH + HN(CH₂CH₂OH)₃ → C₁₇H₃₅COO⁻ ⁺HN(CH₂CH₂OH)₃
+                </div>
+                <p><strong>ستيريك أسيد + ترايثانول أمين → ستيرات الترايثانول أمين (المستحلب)</strong></p>
+                
+                <div class="calculation-box">
+                    <h4>الحسابات العلمية الدقيقة</h4>
+                    <table>
+                        <tr><th>المادة</th><th>الوزن الجزيئي</th><th>الحساب</th><th>النتيجة</th></tr>
+                        <tr><td>الستيريك أسيد</td><td>284 جم/مول</td><td>11000 جم ÷ 284</td><td>38.73 مول</td></tr>
+                        <tr><td>الترايثانول أمين</td><td>149 جم/مول</td><td>38.73 مول × 149</td><td>5771 جم (5.77 كغ)</td></tr>
+                        <tr><td>الكمية العملية (85%)</td><td>-</td><td>5.77 كغ × 0.85</td><td>4.9 كغ ≈ 5 كغ</td></tr>
+                    </table>
+                </div>
+                
+                <div class="warning-box">
+                    <h4>⚠️ ملاحظة هامة حول نسبة التحييد 85%</h4>
+                    <p>نستخدم 85% من الكمية النظرية لأن:</p>
+                    <ul>
+                        <li>ضمان بقاء قليل من الحمض حراً لدرجة حموضة مناسبة</li>
+                        <li>توفير في التكلفة دون التأثير على الجودة</li>
+                        <li>منع القلوية الزائدة التي قد تهيج البشرة</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- الفصل 2 -->
+            <div id="chapter2" class="chapter">
+                <div class="chapter-header">
+                    <h2>الفصل الثاني: التركيبة الأساسية وتحليلها الشامل</h2>
+                </div>
+                
+                <h3>التركيبة النهائية المدروسة والمحسنة</h3>
+                <table>
+                    <tr><th>المادة</th><th>الكمية</th><th>الوظيفة</th><th>الكثافة</th><th>الحجم التقريبي</th></tr>
+                    <tr><td>زيت برافين</td><td>14 كغ</td><td>طور زيتي رئيسي</td><td>0.8 كغ/لتر</td><td>17.5 لتر</td></tr>
+                    <tr><td>فازلين</td><td>12 كغ</td><td>مادة شمعية مكثفة</td><td>0.9 كغ/لتر</td><td>13.3 لتر</td></tr>
+                    <tr><td>ستيريك أسيد</td><td>11 كغ</td><td>حمض دهني للتحييد</td><td>0.9 كغ/لتر</td><td>12.2 لتر</td></tr>
+                    <tr><td>سيتايل الكحول</td><td>5 كغ</td><td>مستحلب مساعد</td><td>0.8 كغ/لتر</td><td>6.3 لتر</td></tr>
+                    <tr><td>سيتريث 20</td><td>2 كغ</td><td>مستحلب غير أيوني</td><td>1.0 كغ/لتر</td><td>2.0 لتر</td></tr>
+                    <tr><td>توين 80</td><td>2.5 كغ</td><td>مستحلب محسن</td><td>1.1 كغ/لتر</td><td>2.3 لتر</td></tr>
+                    <tr><td>ترايثانول أمين</td><td>5 كغ</td><td>قاعدة للتحييد</td><td>1.1 كغ/لتر</td><td>4.5 لتر</td></tr>
+                    <tr><td>ماء</td><td>120 لتر</td><td>طور مائي</td><td>1.0 كغ/لتر</td><td>120 لتر</td></tr>
+                </table>
+                
+                <div class="success-box">
+                    <h4>التحليل النهائي للتركيبة</h4>
+                    <ul>
+                        <li><strong>الكتلة الكلية:</strong> 171.5 كغ</li>
+                        <li><strong>الحجم الكلي:</strong> 178.1 لتر</li>
+                        <li><strong>نسبة التحييد:</strong> 86.6% (مثالية عملياً)</li>
+                        <li><strong>درجة الحموضة المتوقعة:</strong> 6.5-7.5</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- الفصل 3 -->
+            <div id="chapter3" class="chapter">
+                <div class="chapter-header">
+                    <h2>الفصل الثالث: تحييد الكاربابول - دراسة خاصة</h2>
+                </div>
+                
+                <div class="warning-box">
+                    <h4>⚠️ تحذير علمي هام</h4>
+                    <p><strong>لا يمكن تطبيق قانون المولات على الكاربابول!</strong> الكاربابول بوليمر وليس جزيءً صغيراً مثل الستيريك أسيد.</p>
+                </div>
+                
+                <h3>طريقة تحييد الكاربابول الصحيحة</h3>
+                <div class="formula">
+                    كمية الترايثانول أمين = وزن الكاربابول × قيمة التحييد
+                </div>
+                
+                <table>
+                    <tr><th>نوع الكاربابول</th><th>قيمة التحييد</th><th>لـ 1200 جم كاربابول</th><th>التركيز النهائي</th></tr>
+                    <tr><td>Carbopol 940</td><td>0.6-0.7 جم تراي/جم</td><td>720-840 جم</td><td>0.6-0.7%</td></tr>
+                    <tr><td>Carbopol 934</td><td>0.5-0.6 جم تراي/جم</td><td>600-720 جم</td><td>0.5-0.6%</td></tr>
+                    <tr><td>Carbopol Ultrez 20</td><td>0.55-0.65 جم تراي/جم</td><td>660-780 جم</td><td>0.55-0.65%</td></tr>
+                </table>
+                
+                <div class="chemical-box">
+                    <h4>الفرق الجوهري بين المادتين</h4>
+                    <p><strong>الستيريك أسيد:</strong> جزيء صغير - وزن جزيئي محدد 284 جم/مول - كل جزيء له مجموعة كربوكسيل واحدة</p>
+                    <p><strong>الكاربابول:</strong> بوليمر ضخم - وزن جزيئي غير محدد - كل جزيء له آلاف مجموعات الكربوكسيل</p>
+                </div>
+            </div>
+            
+            <!-- الفصل 4 -->
+            <div id="chapter4" class="chapter">
+                <div class="chapter-header">
+                    <h2>الفصل الرابع: توين 80 وسبان 80 - المستحلبات المتخصصة</h2>
+                </div>
+                
+                <div class="formula-cards">
+                    <div class="formula-card">
+                        <div class="card-header">
+                            <h4>توين 80 (Tween 80)</h4>
+                        </div>
+                        <table>
+                            <tr><td>الصيغة الكيميائية</td><td>C₂₄H₄₄O₆ · (C₂H₄O)ₙ · H</td></tr>
+                            <tr><td>نوع المستحلب</td><td>زيت/ماء (O/W)</td></tr>
+                            <tr><td>قيمة HLB</td><td>15.0</td></tr>
+                            <tr><td>قابلية الذوبان</td><td>في الماء والكحول</td></tr>
+                            <tr><td>الاستخدام</td><td>مستحلبات خفيفة سريعة الامتصاص</td></tr>
+                        </table>
+                    </div>
+                    
+                    <div class="formula-card">
+                        <div class="card-header">
+                            <h4>سبان 80 (Span 80)</h4>
+                        </div>
+                        <table>
+                            <tr><td>الصيغة الكيميائية</td><td>C₂₄H₄₄O₆</td></tr>
+                            <tr><td>نوع المستحلب</td><td>ماء/زيت (W/O)</td></tr>
+                            <tr><td>قيمة HLB</td><td>4.3</td></tr>
+                            <tr><td>قابلية الذوبان</td><td>في الزيوت والدهون</td></tr>
+                            <tr><td>الاستخدام</td><td>مراهم وكريمات وقائية</td></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="success-box">
+                    <h4>التآزر بين توين 80 وسبان 80</h4>
+                    <p>عند استخدامهما معاً نحصل على نظام استحلابي مزدوج يقدم:</p>
+                    <ul>
+                        <li><strong>استقرار حراري محسن</strong> ضد التغيرات الحرارية</li>
+                        <li><strong>مدى أوسع من HLB</strong> حسب نسبة الخلط</li>
+                        <li><strong>قوام متوازن</strong> يجمع بين خفة التوين وغنى السبان</li>
+                        <li><strong>حماية أفضل</strong> مع ترطيب مائي</li>
+                    </ul>
+                </div>
+                
+                <div class="calculation-box">
+                    <h4>حساب كمية توين 80 المثالية لتركيبتك</h4>
+                    <p><strong>الطور الزيتي الكلي:</strong> 14 + 12 + 11 + 5 = 42 كغ</p>
+                    <p><strong>الكمية الموصى بها:</strong> 1.5-2.5% من التركيبة الكلية</p>
+                    <p><strong>الحساب:</strong> 171.5 كغ × 0.02 = 3.43 كغ</p>
+                    <p><strong>التوصية النهائية:</strong> 2.5 كغ توين 80 (1.46%)</p>
+                </div>
+            </div>
+            
+            <!-- الفصل 5 -->
+            <div id="chapter5" class="chapter">
+                <div class="chapter-header">
+                    <h2>الفصل الخامس: الخلطات العملية المضبوطة</h2>
+                </div>
+                
+                <h3>4 خلطات عملية شاملة باستخدام توين 80</h3>
+                <div class="formula-cards">
+                    
+                    <div class="formula-card">
+                        <div class="card-header">
+                            <h4>١. كريم خفيف سريع الامتصاص</h4>
+                        </div>
+                        <table>
+                            <tr><th>المادة</th><th>النسبة</th><th>الكمية/100كغ</th></tr>
+                            <tr><td>زيت برافين</td><td>8%</td><td>8 كغ</td></tr>
+                            <tr><td>فازلين</td><td>4%</td><td>4 كغ</td></tr>
+                            <tr><td>ستيريك أسيد</td><td>2%</td><td>2 كغ</td></tr>
+                            <tr><td>توين 80</td><td>2%</td><td>2 كغ</td></tr>
+                            <tr><td>ترايثانول أمين</td><td>0.9%</td><td>0.9 كغ</td></tr>
+                            <tr><td>ماء مقطر</td><td>83.1%</td><td>83.1 كغ</td></tr>
+                        </table>
+                    </div>
+                    
+                    <div class="formula-card">
+                        <div class="card-header">
+                            <h4>٢. كريم كثيف للبشرة الجافة</h4>
+                        </div>
+                        <table>
+                            <tr><th>المادة</th><th>النسبة</th><th>الكمية/100كغ</th></tr>
+                            <tr><td>زيت برافين</td><td>15%</td><td>15 كغ</td></tr>
+                            <tr><td>فازلين</td><td>8%</td><td>8 كغ</td></tr>
+                            <tr><td>ستيريك أسيد</td><td>4%</td><td>4 كغ</td></tr>
+                            <tr><td>توين 80</td><td>3%</td><td>3 كغ</td></tr>
+                            <tr><td>سبان 80</td><td>1%</td><td>1 كغ</td></tr>
+                            <tr><td>ترايثانول أمين</td><td>1.7%</td><td>1.7 كغ</td></tr>
+                            <tr><td>ماء مقطر</td><td>67.3%</td><td>67.3 كغ</td></tr>
+                        </table>
+                    </div>
+                    
+                    <div class="formula-card">
+                        <div class="card-header">
+                            <h4>٣. كريم ليلي مغذي</h4>
+                        </div>
+                        <table>
+                            <tr><th>المادة</th><th>النسبة</th><th>الكمية/100كغ</th></tr>
+                            <tr><td>زيت برافين</td><td>12%</td><td>12 كغ</td></tr>
+                            <tr><td>زيت لوز</td><td>5%</td><td>5 كغ</td></tr>
+                            <tr><td>ستيريك أسيد</td><td>3%</td><td>3 كغ</td></tr>
+                            <tr><td>توين 80</td><td>2.5%</td><td>2.5 كغ</td></tr>
+                            <tr><td>ترايثانول أمين</td><td>1.3%</td><td>1.3 كغ</td></tr>
+                            <tr><td>ماء مقطر</td><td>76.2%</td><td>76.2 كغ</td></tr>
+                        </table>
+                    </div>
+                    
+                    <div class="formula-card">
+                        <div class="card-header">
+                            <h4>٤. مرهم علاجي وقائي</h4>
+                        </div>
+                        <table>
+                            <tr><th>المادة</th><th>النسبة</th><th>الكمية/100كغ</th></tr>
+                            <tr><td>زيت برافين</td><td>20%</td><td>20 كغ</td></tr>
+                            <tr><td>فازلين</td><td>12%</td><td>12 كغ</td></tr>
+                            <tr><td>ستيريك أسيد</td><td>2%</td><td>2 كغ</td></tr>
+                            <tr><td>توين 80</td><td>4%</td><td>4 كغ</td></tr>
+                            <tr><td>ترايثانول أمين</td><td>0.9%</td><td>0.9 كغ</td></tr>
+                            <tr><td>ماء مقطر</td><td>61.1%</td><td>61.1 كغ</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الفصل 6 -->
+            <div id="chapter6" class="chapter">
+                <div class="chapter-header">
+                    <h2>الفصل السادس: طرق التصنيع - الإضافة على الساخن</h2>
+                </div>
+                
+                <div class="steps-box">
+                    <h3>🎯 الخطة العملية المفصلة للتصنيع (الإضافة على الساخن)</h3>
+                    
+                    <div class="step">
+                        <div class="step-number">١</div>
+                        <div class="step-content">
+                            <h4>تحضير الطور الزيتي</h4>
+                            <p>في وعاء مقاوم للحرارة، ضع: <span class="oil-color">زيت برافين 14 كغ + فازلين 12 كغ + ستيريك أسيد 11 كغ + سيتايل الكحول 5 كغ + توين 80 2.5 كغ</span></p>
+                            <p><span class="hot">سخن الخليط إلى 70°م مع التحريك المستمر حتى الذوبان الكامل</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">٢</div>
+                        <div class="step-content">
+                            <h4>تحضير الطور المائي</h4>
+                            <p>في وعاء منفصل، ضع: <span class="water-color">ماء 120 لتر + ترايثانول أمين 5 كغ + سيتريث 20 2 كغ</span></p>
+                            <p><span class="hot">سخن الخليط إلى 70°م مع التحريك حتى الذوبان الكامل</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">٣</div>
+                        <div class="step-content">
+                            <h4>عملية الاستحلاب والتحييد</h4>
+                            <p><span class="highlight">أضف الطور المائي إلى الطور الزيتي ببطء مع الخلط المستمر</span></p>
+                            <p>استمر في الخلط لمدة <span class="highlight">15-20 دقيقة</span> عند <span class="hot">70°م</span> لضمان اكتمال تفاعل التحييد</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">٤</div>
+                        <div class="step-content">
+                            <h4>التبريد والتعبئة</h4>
+                            <p>استمر في الخلط أثناء التبريد إلى <span class="cold">35-40°م</span></p>
+                            <p>أضف العطور والمواد الحساسة للحرارة عند هذه الدرجة</p>
+                            <p>قم بالتعبئة في عبوات نظيفة ومحكمة الإغلاق</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comparison-box">
+                    <h4>مقارنة الإضافة على الساخن vs البارد</h4>
+                    <table>
+                        <tr><th>المعيار</th><th>على الساخن (70°م)</th><th>على البارد (25°م)</th></tr>
+                        <tr><td>اكتمال التفاعل</td><td>🟢 95-98%</td><td>🔴 60-70%</td></tr>
+                        <tr><td>جودة المستحلب</td><td>🟢 قوي ومستقر</td><td>🔴 ضعيف وينفصل</td></tr>
+                        <tr><td>درجة الحموضة</td><td>🟢 6.5-7.5 (مثالي)</td><td>🔴 4.5-5.5 (حمضي)</td></tr>
+                        <tr><td>نعومة القوام</td><td>🟢 ناعم جداً</td><td>🔴 خشن وحبيبي</td></tr>
+                        <tr><td>وقت التصنيع</td><td>🟢 30-40 دقيقة</td><td>🔴 60-90 دقيقة</td></tr>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- الفصل 7 -->
+            <div id="chapter7" class="chapter">
+                <div class="chapter-header">
+                    <h2>الفصل السابع: نسب الأطوار - التصحيح الشامل</h2>
+                </div>
+                
+                <div class="correction-box">
+                    <h4>⚠️ تصحيح هام: الأخطاء الحسابية السابقة</h4>
+                    <p>في الحسابات السابقة كانت النسب <span class="oil-color">29.4% زيتي + 83.9% مائي = 113.3%</span> وهذا مستحيل رياضياً!</p>
+                </div>
+                
+                <div class="calculation-box">
+                    <h4>الحسابات الصحيحة والدقيقة</h4>
+                    <table>
+                        <tr><th>البند</th><th>الحساب</th><th>النتيجة</th></tr>
+                        <tr><td>الطور الزيتي</td><td>14 + 12 + 11 + 5 + 2.5</td><td>44.5 كغ</td></tr>
+                        <tr><td>الطور المائي</td><td>120 + 5 + 2</td><td>127 كغ</td></tr>
+                        <tr><td>الكتلة الكلية</td><td>44.5 + 127</td><td>171.5 كغ</td></tr>
+                        <tr><td>نسبة الزيتي</td><td>(44.5 ÷ 171.5) × 100</td><td>25.9%</td></tr>
+                        <tr><td>نسبة المائي</td><td>(127 ÷ 171.5) × 100</td><td>74.1%</td></tr>
+                        <tr><td>المجموع</td><td>25.9% + 74.1%</td><td>100% ✅</td></tr>
+                    </table>
+                </div>
+                
+                <div class="phase-analysis">
+                    <div class="analysis-card current-card">
+                        <div class="card-header">
+                            <div class="card-icon">📊</div>
+                            <h3>الوضع الحالي</h3>
+                            <p>25.9% زيتي - 74.1% مائي</p>
+                        </div>
+                        <h4>✅ المزايا:</h4>
+                        <ul>
+                            <li>قوام أخف وأسرع امتصاصاً</li>
+                            <li>مناسب للبشرة الدهنية</li>
+                            <li>تكلفة أقل</li>
+                        </ul>
+                        <h4>❌ العيوب:</h4>
+                        <ul>
+                            <li>أقل كثافة من المطلوب</li>
+                            <li>أقل حماية من الجفاف</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="analysis-card ideal-card">
+                        <div class="card-header">
+                            <div class="card-icon">🎯</div>
+                            <h3>النسبة المثالية</h3>
+                            <p>30% زيتي - 70% مائي</p>
+                        </div>
+                        <h4>✅ المزايا:</h4>
+                        <ul>
+                            <li>قوام كريمي مثالي</li>
+                            <li>حماية أفضل من الجفاف</li>
+                            <li>ترطيب عميق طويل الأمد</li>
+                        </ul>
+                        <h4>⚖️ الموازنة:</h4>
+                        <ul>
+                            <li>تكلفة أعلى قليلاً</li>
+                            <li>أبطأ امتصاصاً</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="success-box">
+                    <h4>🎯 التوصية العملية للتعديل</h4>
+                    <p>لتحقيق نسبة 30% زيتي، تحتاج إضافة <span class="oil-color">7 كغ</span> مواد زيتية:</p>
+                    <ul>
+                        <li>زيت برافين: +3 كغ</li>
+                        <li>فازلين: +2 كغ</li>
+                        <li>زيت لوز: +2 كغ</li>
+                    </ul>
+                    <p><strong>النتيجة:</strong> 28.9% زيتي - 71.1% مائي (تحسن ملحوظ)</p>
+                </div>
+            </div>
+            
+            <!-- الفصل 8 -->
+            <div id="chapter8" class="chapter">
+                <div class="chapter-header">
+                    <h2>الفصل الثامن: النصائح العلمية والتحذيرات الشاملة</h2>
+                </div>
+                
+                <div class="properties-grid">
+                    <div class="property-card">
+                        <h4>📊 القواعد الحسابية الأساسية</h4>
+                        <ul>
+                            <li><strong>تحييد الستيريك أسيد:</strong><br>TEA = (SA × 149 ÷ 284) × 0.85</li>
+                            <li><strong>تحييد الكاربابول:</strong><br>TEA = Carbopol × Neutralization Value</li>
+                            <li><strong>حساب HLB للمخاليط:</strong><br>HLB<sub>مخلوط</sub> = ∑(النسبة × HLB)</li>
+                            <li><strong>نسبة الأطوار:</strong><br>النسبة = (الكتلة ÷ الكتلة الكلية) × 100</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="property-card">
+                        <h4>⚠️ تحذيرات السلامة</h4>
+                        <ul>
+                            <li>تهوية جيدة عند تسخين الترايثانول أمين</li>
+                            <li>استخدام معدات وقاية شخصية كاملة</li>
+                            <li>عدم تجاوز 80°م في التسخين</li>
+                            <li>التبريد التدريجي وليس المفاجئ</li>
+                            <li>قياس درجة الحموضة النهائية</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="property-card">
+                        <h4>🔬 ضمان الجودة</h4>
+                        <ul>
+                            <li>ابدأ بخلطة تجريبية صغيرة (1-2 كغ)</li>
+                            <li>اختبر ثبات المستحلب 48 ساعة</li>
+                            <li>تحقق من درجة الحموضة (5.5-7)</li>
+                            <li>راقب القوام والمظهر واللون</li>
+                            <li>سجل جميع الملاحظات والتعديلات</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="warning-box">
+                    <h4>❌ الأخطاء الشائعة التي يجب تجنبها</h4>
+                    <ul>
+                        <li><strong>إضافة الترايثانول أمين على البارد:</strong> يمنع اكتمال تفاعل التحييد</li>
+                        <li><strong>تجاوز درجة حرارة 80°م:</strong> قد يتلف الخواص الكيميائية</li>
+                        <li><strong>الخلط غير الكافي:</strong> يؤدي إلى مستحلب غير مستقر</li>
+                        <li><strong>إهمال قياس الـ pH:</strong> قد ينتج منتج حمضي يهيج البشرة</li>
+                        <li><strong>التعبئة على الساخن:</strong> يسبب تكون قطرات ماء على الغطاء</li>
+                    </ul>
+                </div>
+                
+                <div class="success-box">
+                    <h3>الخلاصة النهائية الشاملة</h3>
+                    <p>هذا الدليل يحتوي على <span class="highlight">كل المعلومات العلمية والعملية</span> التي ناقشناها في المحادثة، بما في ذلك:</p>
+                    <ul>
+                        <li>✅ <strong>الأسس الكيميائية</strong> لتحليل التحييد والمعادلات</li>
+                        <li>✅ <strong>التركيبات المضبوطة</strong> جاهزة للاستخدام</li>
+                        <li>✅ <strong>طرق التصنيع</strong> العلمية الصحيحة (الإضافة على الساخن)</li>
+                        <li>✅ <strong>تحليل المواد</strong> والمستحلبات (توين 80، سبان 80)</li>
+                        <li>✅ <strong>حسابات الأطوار</strong> الدقيقة والمصححة</li>
+                        <li>✅ <strong>نصائح الجودة</strong> والسلامة والتحذيرات</li>
+                        <li>✅ <strong>كل التصحيحات</strong> والحسابات الدقيقة</li>
+                    </ul>
+                    <p style="text-align: center; margin-top: 20px; font-size: 1.2rem;">
+                       
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 الدليل الشامل النهائي لتركيب المستحلبات والكريمات</p>
+        
+        </footer>
+    </div>
+
+    <script>
+        // دالة للتنقل السلس بين الفصول
+        function scrollToChapter(chapterId) {
+            const element = document.getElementById(chapterId);
+            const offset = 80;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+        
+        // إضافة active class للفصل الحالي
+        window.addEventListener('scroll', function() {
+            const chapters = document.querySelectorAll('.chapter');
+            const tocItems = document.querySelectorAll('.toc-item');
+            
+            let currentChapterId = '';
+            
+            chapters.forEach(chapter => {
+                const chapterTop = chapter.offsetTop - 100;
+                if (window.scrollY >= chapterTop) {
+                    currentChapterId = chapter.id;
+                }
+            });
+            
+            tocItems.forEach(item => {
+                item.style.background = 'white';
+                item.style.color = 'var(--dark)';
+                
+                if (item.getAttribute('onclick').includes(currentChapterId)) {
+                    item.style.background = 'var(--secondary)';
+                    item.style.color = 'white';
+                }
+            });
+        });
+        
+        // طباعة رسالة في الكونسول
+        console.log("ملف الدليل الشامل النهائي جاهز للاستخدام - يحتوي على كل المحادثة");
+    </script>
+</body>
+</html>
